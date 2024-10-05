@@ -79,7 +79,7 @@ void align(int n_args, char **args) {
                 if (strncmp(line_data, pattern, pattern_len) == 0) {
                     col = yed_line_idx_to_col(line, ((void*)git) - line->chars.data);
                     for (i = 0; i < max_col - col; i += 1) {
-                        yed_insert_into_line(buff, row, col, G(' '));
+                        yed_insert_into_line(buff, row, col, GLYPH(" "));
                     }
                     break;
                 }
